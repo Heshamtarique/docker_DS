@@ -55,7 +55,38 @@ only application part is called everytime by some new use as compared to
 VM(both app layer & OS kernal is called). Making Docker faster. 
 VM can be installed on any OS, but with docker there is a compatibility issue
 
+-----------------
+Commands that will be used in docker file
+FROM baseImage
+COPY --> all the files and folders from my floder will be copied into this
+WORKDIR --> working directory
+RUN
+CMD
+
+docker image will be created by using the above commands
+
+to build an image --> docker build -t welcome-app .
+to see that the image has been created --> docker iamges
+running the docker image --> 
+    1: host port 
+    2: container port
 
 
+we will get 2 outputs 
+ * Running on http://127.0.0.1:5001
+ * Running on http://172.17.0.2:5001
 
+ first will work, second will be running inside the image
 
+terminal command to build a docker image
+
+    method1    * docker build -t heshamtarique/welcome-app .
+    method2    * docker tag heshamtarique/welcome-app heshamtarique/welcome-app 
+        docker images --> to  see the images 
+        docker ps
+    removing a docker image
+        * docker iamge rm -f heshamtarique/welcome-app
+    pushing a docker image
+        * docker push heshamtarique/welcome-app2:latest
+    pull from docker image
+        * docker pull heshamtarique/welcome-app:latest
