@@ -90,3 +90,12 @@ terminal command to build a docker image
         * docker push heshamtarique/welcome-app2:latest
     pull from docker image
         * docker pull heshamtarique/welcome-app:latest
+
+-------------------------------------------------
+Docker compose:
+    if i have an app running as a container... if this web app wants to use MySQL, Redis, or mongoDB... 
+    its not possible to run them in one container.. so separate containers for MySQL, Redis, mongoDB
+    Docker compose is used for defining and running multi container docker applications. 
+    we define:
+        docoker-compose.yml file
+        
