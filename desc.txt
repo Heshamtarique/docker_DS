@@ -1,0 +1,61 @@
+containers:
+    its a way to package applications with all the necessary dependencies and configration.
+    portable artifact... easy to share and move this package to any env 
+    this makes the development and depoyment ease, sort of streamlininig the process.
+    synced and efficient 
+    moving table, bed one by one from one house to another house while shifting is not advisable
+    thus- make a container and move from one env to another env
+    dev env package can be run to QA env this will help in mitigating the dependency, package issues
+    Docker is one such platform for creating this kind of containers
+
+Docker Image:
+    MyApp: [dependencies & configration, mongoDB]
+    |
+    |
+    container: -conmbination of layers of images
+        they will have layers of images: 
+        ------------------------
+        | MongoDB image
+        ------------------------
+        | Anaconda image
+        ------------------------
+        | python 3.8 image
+        ------------------------
+        | linux Base Image - small size
+        ------------------------
+
+    combiantion of entier layers of images is called DOCKER IMAGE
+
+
+Running this docker image will create a container which is an env within this env
+it will try to run this application 
+
+
+DOCKER                              CONTAINER
+------------------------------------------------------------------------
+package or artifact                 docker iamge--> run
+
+we can move the above               start the application
+package/artifact                    create a container --> env
+
+------------------------------------------------------------------------
+docker images are very small... bcs same thing can be done from Virtual Machine.
+
+
+
+---------------
+application layer
+---------------
+OS kernal layer
+---------------
+Hardaware
+---------------
+
+only application part is called everytime by some new use as compared to 
+VM(both app layer & OS kernal is called). Making Docker faster. 
+VM can be installed on any OS, but with docker there is a compatibility issue
+
+
+
+
+
